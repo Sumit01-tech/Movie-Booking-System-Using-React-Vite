@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+/* Import Tailwind CSS Preflight */
+@import "tailwindcss/preflight"; 
+@import "tailwindcss/utilities"; 
+
+body {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  background: #030014;
+}
+
+h1 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 64rem;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.25;
+  letter-spacing: -1%;
+  color: white;
+}
+
+@media (min-width: 640px) { 
+  h1 {
+    font-size: 64px;
+    line-height: 76px;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+@media (min-width: 640px) {
+  h2 {
+    font-size: 3rem;
+  }
+}
+
+main {
+  min-height: 100vh;
+  position: relative;
+  background: var(--color-primary);
+}
+
+header {
+  margin-top: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  header {
+    margin-top: 2.5rem;
+  }
+}
+
+header img {
+  width: 100%;
+  max-width: 32rem;
+  height: auto;
+  object-fit: contain;
+  margin-left: auto;
+  margin-right: auto;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+.wrapper {
+  padding: 3rem 1.25rem;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 10;
+}
+
+@media (min-width: 475px) {
+  .wrapper {
+    padding: 2.5rem;
+  }
+}
+
+.trending {
+  margin-top: 5rem;
+}
+
+.trending ul {
+  display: flex;
+  flex-direction: row;
+  overflow-y: auto;
+  gap: 1.25rem;
+  margin-top: -2.5rem;
+  width: 100%;
+}
+
+.trending ul li {
+  min-width: 230px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.trending ul li p {
+  margin-top: 22px;
+  white-space: nowrap;
+}
+
+.trending ul li img {
+  width: 127px;
+  height: 163px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-left: -14px;
+}
+
+.search {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-top: 2.5rem;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search div {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search img {
+  position: absolute;
+  left: 8px;
+  height: 20px;
+  width: 20px;
+}
+
+.search input {
+  width: 100%;
+  background: transparent;
+  padding: 0.5rem 2.5rem 0.5rem 2.5rem;
+  font-size: 1rem;
+  color: #d1d5db;
+  outline: none;
+}
+
+.all-movies {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+}
+
+.all-movies ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 475px) {
+  .all-movies ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .all-movies ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .all-movies ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.movie-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.25rem;
+  border-radius: 16px;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.movie-card img {
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+}
+
+.movie-card h3 {
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.movie-card .content {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.movie-card .rating {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.movie-card .rating img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.movie-card .rating p {
+  font-weight: bold;
+  font-size: 1rem;
+  color: white;
+}
+
+.movie-card .content span {
+  font-size: 0.875rem;
+  color: #d1d5db;
+}
+
+.movie-card .content .lang {
+  text-transform: capitalize;
+  color: #d1d5db;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.movie-card .content .year {
+  color: #d1d5db;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #d6c7ff, #ab8bff);
+  -webkit-background-clip: text;  
+  -moz-background-clip: text;     
+  background-clip: text;           
+  -webkit-text-fill-color: transparent;
+}
+
+.fancy-text {
+  -webkit-text-stroke: 5px rgba(206, 206, 251, 0.5);
+  font-size: 190px;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
